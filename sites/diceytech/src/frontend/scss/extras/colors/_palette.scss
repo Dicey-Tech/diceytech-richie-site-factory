@@ -3,12 +3,16 @@
 // This file is to override the default Richie palette colors.
 // Default Richie file: https://github.com/openfun/richie/blob/master/src/frontend/scss/colors/_palette.scss
 
-// The example below only overrides the `firebrick6` color value from `#F72C30` to `#FF0000`,
-// other palette colors are still those by default.
-
-// $palette: recursive-map-merge(
-//   $palette,
-//   (
-//     'firebrick6': #FF0000,
-//   )
-// );
+$palette: recursive-map-merge(
+  $palette,
+  (
+    'usc_gold': #ffc803,
+    'indianred3': #0f7087, //dark_cyan
+    'very_dark_magenta': #440641,
+    'bright_turquoise': #0cebdc,
+    'vivid_cyan': #23c9ff,
+    'pale_violet': #a18fff,
+    'firebrick6': #d9167e, // vivid_cerise
+    'fern': #61ce70,
+  )
+);
