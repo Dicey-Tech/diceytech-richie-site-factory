@@ -1,4 +1,4 @@
-RICHIE_SITE ?= funmooc
+RICHIE_SITE ?= diceytech
 
 # -- Terminal colors
 COLOR_INFO    = \033[0;36m
