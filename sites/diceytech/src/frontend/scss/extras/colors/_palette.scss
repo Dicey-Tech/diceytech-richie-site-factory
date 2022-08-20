@@ -3,16 +3,13 @@
 // This file is to override the default Richie palette colors.
 // Default Richie file: https://github.com/openfun/richie/blob/master/src/frontend/scss/colors/_palette.scss
 
-$palette: recursive-map-merge(
-  $palette,
-  (
-    'usc_gold': #ffc803,
-    'indianred3': #0f7087, //dark_cyan
-    'very_dark_magenta': #440641,
-    'bright_turquoise': #0cebdc,
-    'vivid_cyan': #23c9ff,
-    'pale_violet': #a18fff,
-    'firebrick6': #d9167e, // vivid_cerise
-    'fern': #61ce70,
-  )
-);
+$palette: recursive-map-merge($palette, (
+  'usc-gold': #ffc803,
+  'dark-cyan': #0f7087, // indianred3
+  'very-dark-magenta': #440641,
+  'bright-turquoise': #0cebdc,
+  'vivid-cyan': #23c9ff,
+  'pale-violet': #a18fff,
+  'vivid-cerise': #d9167e, // firebrick6
+  'fern': #61ce70,
+));

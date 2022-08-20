@@ -1,0 +1,10 @@
+// Basic color schemes
+// ---------
+$vivid-cerise-scheme: (
+  font-color: r-color('white'),
+  link-color: r-color('light-grey'),
+  svg-color: r-color('white'),
+  background: r-color('vivid-cerise'),
+  hover-font-color: r-color('white'),
+  hover-background: adjust-color(r-color('very-dark-magenta')),
+);
