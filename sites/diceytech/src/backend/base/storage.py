@@ -56,5 +56,5 @@ class MediaStorage(S3Boto3Storage):
     """A S3Boto3Storage backend to serve media files via CloudFront."""
 
     bucket_name = getattr(settings, "AWS_MEDIA_BUCKET_NAME", None)
-    custom_domain = getattr(settings, "CDN_DOMAIN", None)
+    custom_domain = getattr(settings, "MEDIA_CDN_DOMAIN", None)
     file_overwrite = False
