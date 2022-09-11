@@ -1,6 +1,8 @@
 {% extends "richie/base.html" %}
 {% load cms_tags static i18n %}
 
+{% block site_title_separator %} | {% endblock site_title_separator %}
+
 {% block topbar_contact %}
 <li class="topbar__item topbar__item--cta">
     <a href="https://diceytech.co.uk/">{% trans "Home" %}</a>
