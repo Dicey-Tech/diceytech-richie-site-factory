@@ -17,7 +17,7 @@ import { SearchAutosuggestProps, SearchSuggestionSection } from 'types/Suggestio
 
 const messages = defineMessages({
     searchFieldPlaceholder: {
-        defaultMessage: 'Search for projects, organizations, categories',
+        defaultMessage: 'Search for projects',
         description: 'Placeholder text displayed in the search field when it is empty.',
         id: 'components.SearchSuggestField.searchFieldPlaceholder',
     },
