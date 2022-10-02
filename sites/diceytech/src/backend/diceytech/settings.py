@@ -602,6 +602,9 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         "body > svg, #main-menu, .body-footer, .body-mentions"
     )
 
+    # Filters customization
+    RICHIE_FILTERS_PRESENTATION = ["organizations"]
+
     # pylint: disable=invalid-name
     @property
     def ENVIRONMENT(self):
