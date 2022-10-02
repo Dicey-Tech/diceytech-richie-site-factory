@@ -1,3 +1,8 @@
 {
-  "overrides": {}
+  "overrides": {
+    "CourseGlimpseList/index.tsx": "../../../../../js/components/CourseGlimpseList/index.tsx",
+    "SearchSuggestField/index.tsx": "../../../../../js/components/SearchSuggestField/index.tsx",
+    "RootSearchSuggestField/index.tsx": "../../../../../js/components/RootSearchSuggestField/index.tsx",
+    "SearchFiltersPane/index.tsx": "../../../../../js/components/SearchFiltersPane/index.tsx"
+  }
 }
