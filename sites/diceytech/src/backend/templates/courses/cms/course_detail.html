@@ -266,7 +266,7 @@
                         {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_skills" %}
                         <div class="course-detail__row course-detail__skills">
                             <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}What you will learn{% endblocktrans %}</h2>
-                            <p>{% trans "At the end of this course, you will be able to:" %}</p>
+                            <p>{% trans "By doing this project, you will showcase your ability to:" %}</p>
                             {% placeholder "course_skills" %}
                         </div>
                         {% endif %}
@@ -288,7 +288,7 @@
                             <section class="course-detail__row course-detail__format">
                                 <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Format{% endblocktrans %}</h2>
                                 {% placeholder "course_format" or %}
-                                <p>{% trans 'How is the course structured?' %}</p>
+                                <p>{% trans 'How is the project structured?' %}</p>
                                 {% endplaceholder %}
                             </section>
                         {% endif %}
@@ -300,7 +300,7 @@
                                 <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Prerequisites{% endblocktrans %}</h2>
                                 <div property="coursePrerequisites">
                                 {% placeholder "course_prerequisites" or %}
-                                    <p>{% trans 'What are the prerequisites to follow this course?' %}</p>
+                                    <p>{% trans 'What are the prerequisites to take on this project?' %}</p>
                                 {% endplaceholder %}
                                 </div>
                             </section>
@@ -325,7 +325,7 @@
                     <div class="course-detail__block course-detail__secondary-group">
                         {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_plan" %}
                         <section class="course-detail__row course-detail__plan">
-                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Course plan{% endblocktrans %}</h2>
+                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Project plan{% endblocktrans %}</h2>
 
                             {% placeholder "course_plan" or %}
                                 <p class="course-detail__empty">{% trans 'Enter here the detailed course plan.' %}</p>
@@ -397,7 +397,7 @@
                             {% if upcoming_runs|visible_on_course_page:request.toolbar.edit_mode_active %}
                                 <div class="course-detail__row course-detail__runs course-detail__runs--upcoming">
                                     <h3 class="course-detail__title">
-                                        {% trans "Upcoming" context "Upcoming course runs (plural)" %}
+                                        {% trans "Upcoming" context "Upcoming project runs (plural)" %}
                                     </h3>
                                     {% include "courses/cms/fragment_course_runs_list.html" with course_runs=upcoming_runs %}
                                 </div>
@@ -410,7 +410,7 @@
                             {% if ongoing_runs|length > 0 %}
                                 <div class="course-detail__row course-detail__runs course-detail__runs--ongoing">
                                     <h3 class="course-detail__title">
-                                        {% trans "Ongoing" context "Ongoing course runs (plural)" %}
+                                        {% trans "Ongoing" context "Ongoing project runs (plural)" %}
                                     </h3>
                                     {% include "courses/cms/fragment_course_runs_list.html" with course_runs=ongoing_runs %}
                                 </div>
@@ -423,7 +423,7 @@
                             {% if archived_runs|length > 0 %}
                                 <div class="course-detail__row course-detail__runs course-detail__runs--archived">
                                     <h3 class="course-detail__title">
-                                        {% trans "Archived" context "Archived course runs (plural)" %}
+                                        {% trans "Archived" context "Archived project runs (plural)" %}
                                     </h3>
                                     {% include "courses/cms/fragment_course_runs_list.html" with max_course_runs=RICHIE_MAX_ARCHIVED_COURSE_RUNS course_runs=archived_runs%}
                                 </div>
