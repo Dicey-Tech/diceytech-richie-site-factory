@@ -8,7 +8,7 @@
                 <dd>
                     {% blocktrans with enrollment_start=run.enrollment_start|date:'DATE_FORMAT'|default:'...' enrollment_end=run.enrollment_end|date:'DATE_FORMAT'|default:'...' %}From {{ enrollment_start }} to {{ enrollment_end }}{% endblocktrans %}
                 </dd>
-                <dt>{% trans "Project" %}</dt>
+                <dt>{% trans "Project Submission Deadline" %}</dt>
                 {% if run.start %}
                 <meta property="startDate" content="{{ run.start|date:'Y-m-d' }}" />
                 {% endif %}
@@ -16,10 +16,10 @@
                 <meta property="endDate" content="{{ run.end|date:'Y-m-d' }}" />
                 {% endif %}
                 <dd>
-                    {% blocktrans with start=run.start|date:'DATE_FORMAT'|default:'...' end=run.end|date:'DATE_FORMAT'|default:'...' %}From {{ start }} to {{ end }}{% endblocktrans %}
+                    {% blocktrans with start=run.start|date:'DATE_FORMAT'|default:'...' end=run.end|date:'DATE_FORMAT'|default:'...' %}{{ end }}{% endblocktrans %}
                 </dd>
-                <dt>{% trans "Languages" %}</dt>
-                <dd>{{ run.get_languages_display }}</dd>
+                <!--dt>{% trans "Languages" %}</dt>
+                <dd>{{ run.get_languages_display }}</dd-->
             </dl>
         {% endrender_model_block %}
         {% if run|has_connected_lms %}

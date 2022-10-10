@@ -262,26 +262,26 @@
 
                 {% block fragment_content %}
                 <div class="course-detail__block course-detail__primary-group">
-                    {% block skills %}
-                        {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_skills" %}
-                        <div class="course-detail__row course-detail__skills">
-                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}What you will learn{% endblocktrans %}</h2>
-                            <p>{% trans "By doing this project, you will showcase your ability to:" %}</p>
-                            {% placeholder "course_skills" %}
-                        </div>
-                        {% endif %}
-                    {% endblock skills %}
 
                     {% block description %}
                         {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_description" %}
                         <div class="course-detail__row course-detail__description">
-                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Description{% endblocktrans %}</h2>
+                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Project Overview{% endblocktrans %}</h2>
                             <div{% if current_page|is_empty_placeholder:'course_introduction' %} property="description"{% endif %}>
                                 {% placeholder "course_description" %}
                             </div>
                         </div>
                         {% endif %}
                     {% endblock description %}
+
+                    {% block skills %}
+                        {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_skills" %}
+                        <div class="course-detail__row course-detail__skills">
+                            <h2 class="course-detail__title">{% blocktrans context "course_detail__title" %}Skills you will demonstrate{% endblocktrans %}</h2>
+                            {% placeholder "course_skills" %}
+                        </div>
+                        {% endif %}
+                    {% endblock skills %}
 
                     {% block format %}
                         {% if current_page.publisher_is_draft or not current_page|is_empty_placeholder:"course_format" %}
@@ -338,7 +338,7 @@
             </div>
 
             {% block runs %}
-                <div class="course-detail__aside" property="isAccessibleForFree" content="true">
+                <!-- div class="course-detail__aside" property="isAccessibleForFree" content="true">
                     {% is_joanie_enabled as joanie_is_active %}
                     {% if joanie_is_active is True %}
                         {% include "courses/cms/fragment_course_products.html" with course=course %}
@@ -432,7 +432,7 @@
                         {% endblock runs_archived %}
 
                     {% endwith %}
-                </div>
+                </div -->
             {% endblock runs %}
 
         </div>
