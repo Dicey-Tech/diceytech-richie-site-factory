@@ -1,6 +1,7 @@
 {% load cms_tags i18n extra_tags %}{% spaceless %}
 {% if run.is_visible_on_course_page or request.toolbar.edit_mode_active %}
     <div class="course-detail__run-descriptions course-detail__run-descriptions--{{ run.catalog_visibility|lower }}" rel="hasCourseInstance" typeof="CourseInstance">
+        <!-- 
         {% render_model_block run %}
             {% if run.title %}<h3>{{ run.title|capfirst }}</h3>{% endif %}
             <dl property="courseMode" content="online">
@@ -18,10 +19,11 @@
                 <dd>
                     {% blocktrans with start=run.start|date:'DATE_FORMAT'|default:'...' end=run.end|date:'DATE_FORMAT'|default:'...' %}{{ end }}{% endblocktrans %}
                 </dd>
-                <!--dt>{% trans "Languages" %}</dt>
-                <dd>{{ run.get_languages_display }}</dd-->
+                <dt>{% trans "Languages" %}</dt>
+                <dd>{{ run.get_languages_display }}</dd >
             </dl>
         {% endrender_model_block %}
+        -->
         {% if run|has_connected_lms %}
             <div
                 class="richie-react richie-react--course-run-enrollment"
