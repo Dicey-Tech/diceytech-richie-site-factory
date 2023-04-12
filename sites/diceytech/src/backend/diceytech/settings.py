@@ -224,6 +224,10 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
                     "label": _("Portfolio"),
                     "href": _("https://portfolio.diceytech.co.uk/"),
                 },
+                "jobs": {
+                    "label": _("Jobs"),
+                    "href": _("https://portfolio.diceytech.co.uk/jobs"),
+                },
                 "profile": {
                     "label": _("Profile"),
                     "href": _("{base_url:s}/u/(username)"),
