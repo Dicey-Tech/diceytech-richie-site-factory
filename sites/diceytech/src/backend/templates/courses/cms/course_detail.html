@@ -338,6 +338,27 @@
             </div>
 
             {% block runs %}
+                <div class="course-detail__aside">
+                    {% placeholder_as_plugins "project_skills" as project_skills %}
+                    <meta property="image" content="{% thumbnail project_skills.0.picture 300x170 replace_alpha='#FFFFFF' crop upscale subject_location=project_skills.0.picture.subject_location %}" />
+                    {% if current_page.publisher_is_draft %}
+                        {% if not project_skills %}
+                        <p class="empty">{% trans 'Add skills map.' %}</p>
+                        {% endif %}
+                    {% endif %}
+                    {% blockplugin project_skills.0 %}
+                    <img
+                        src="{% thumbnail instance.picture 300x170 replace_alpha='#FFFFFF' crop upscale subject_location=instance.picture.subject_location %}"
+                        srcset="
+                        {% thumbnail instance.picture 800x457 replace_alpha='#FFFFFF' crop upscale subject_location=instance.picture.subject_location %} 300w
+                        {% if instance.picture.width >= 1600 %},{% thumbnail instance.picture 1600x960 replace_alpha='#FFFFFF' crop upscale subject_location=instance.picture.subject_location %} 600w{% endif %}
+                        {% if instance.picture.width >= 2400 %},{% thumbnail instance.picture 2400x1440 replace_alpha='#FFFFFF' crop upscale subject_location=instance.picture.subject_location %} 900w{% endif %}
+                        "
+                        sizes="300px"
+                        alt="{% if instance.picture.default_alt_text %}{{ instance.picture.default_alt_text }}{% else %}{% trans 'skills map image' %}{% endif %}"
+                    />
+                    {% endblockplugin %}
+                </div>
                 <!-- div class="course-detail__aside" property="isAccessibleForFree" content="true">
                     {% is_joanie_enabled as joanie_is_active %}
                     {% if joanie_is_active is True %}

@@ -335,6 +335,11 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
                 "VideoPlayerPlugin": 1,
             },
         },
+        "courses/cms/course_detail.html project_skills": {
+            "name": _("Skills Map"),
+            "plugins": ["SimplePicturePlugin"],
+            "limits": {"SimplePicturePlugin": 1},
+        }
     }
 
     MIDDLEWARE = (
