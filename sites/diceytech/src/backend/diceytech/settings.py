@@ -616,7 +616,7 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
     )
 
     # Filters customization
-    RICHIE_FILTERS_PRESENTATION = ["organizations", "profile", "difficulty-level"]
+    RICHIE_FILTERS_PRESENTATION = ["organizations", "profiles", "difficulty-levels"]
 
     # pylint: disable=invalid-name
     @property
